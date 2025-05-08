@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Películas</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Películas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="contenedor">
+  <div class="container">
     <header>
-      <h1>Películas que me gustaría ver y películas que ya vi</h1>
+      <h1>🎬 Mis Películas</h1>
+      <p>Clasifica tus películas entre las que quieres ver y las que ya viste</p>
     </header>
 
     <main>
-      <form id="formulario">
-        <input type="text" id="titulo" placeholder="Título de la película" required>
-        <input type="text" id="categoria" placeholder="Categoría" required>
-        <select id="estado">
-          <option value="Por ver">Por ver</option>
-          <option value="Vista">Vista</option>
-        </select>
-        <button type="submit">Agregar</button>
-      </form>
+      <section class="form-section">
+        <h2>Agregar / Editar Película</h2>
+        <form id="formulario">
+          <input type="hidden" id="id" />
+          <input type="text" id="titulo" placeholder="Título" required />
+          <input type="text" id="genero" placeholder="Género" required />
+          <select id="estado" required>
+            <option value="">Seleccionar estado</option>
+            <option value="por_ver">🎞️ Quiero ver</option>
+            <option value="vistas">✅ Ya la vi</option>
+          </select>
+          <button type="submit">Guardar</button>
+        </form>
+      </section>
 
-      <div id="lista-peliculas"></div>
+      <section class="list-section">
+        <h2>🎞️ Películas que quiero ver</h2>
+        <table id="porVer">
+          <thead><tr><th>Título</th><th>Género</th><th>Acciones</th></tr></thead>
+          <tbody></tbody>
+        </table>
 
-      <!-- Sección de trailers -->
-      <section id="trailers">
-        <h2>Trailers</h2>
-        <div class="trailers-contenedor">
-          <a href="https://www.youtube.com/watch?v=EXeTwQWrcwY" target="_blank">
-            <img src="https://img.youtube.com/vi/EXeTwQWrcwY/hqdefault.jpg" alt="Trailer de El Caballero de la Noche">
-          </a>
-          <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" target="_blank">
-            <img src="https://img.youtube.com/vi/6ZfuNTqbHE8/hqdefault.jpg" alt="Trailer de Avengers: Infinity War">
-          </a>
-        </div>
+        <h2>✅ Películas que ya vi</h2>
+        <table id="vistas">
+          <thead><tr><th>Título</th><th>Género</th><th>Acciones</th></tr></thead>
+          <tbody></tbody>
+        </table>
       </section>
     </main>
-
-    <footer>
-      <p>&copy; 2025 - Victor Hugo Ahumada Villa</p>
-    </footer>
   </div>
+  <section id="trailers">
+    <h2>Trailers</h2>
+    <div class="trailers-contenedor">
+      <a href="https://www.youtube.com/watch?v=EXeTwQWrcwY" target="_blank">
+        <img src="https://img.youtube.com/vi/EXeTwQWrcwY/hqdefault.jpg" alt="Trailer de El Caballero de la Noche">
+      </a>
+      <a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" target="_blank">
+        <img src="https://img.youtube.com/vi/6ZfuNTqbHE8/hqdefault.jpg" alt="Trailer de Avengers: Infinity War">
+      </a>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 - Victor Hugo Ahumada Villa</p>
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>
