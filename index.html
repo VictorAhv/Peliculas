@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Películas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎬 Mis Películas</h1>
+      <p>Clasifica tus películas entre las que quieres ver y las que ya viste</p>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Agregar / Editar Película</h2>
+        <form id="formulario">
+          <input type="hidden" id="id" />
+          <input type="text" id="titulo" placeholder="Título" required />
+          <input type="text" id="genero" placeholder="Género" required />
+          <select id="estado" required>
+            <option value="">Seleccionar estado</option>
+            <option value="por_ver">🎞️ Quiero ver</option>
+            <option value="vistas">✅ Ya la vi</option>
+          </select>
+          <button type="submit">Guardar</button>
+        </form>
+      </section>
+
+      <section class="list-section">
+        <h2>🎞️ Películas que quiero ver</h2>
+        <table id="porVer">
+          <thead><tr><th>Título</th><th>Género</th><th>Acciones</th></tr></thead>
+          <tbody></tbody>
+        </table>
+
+        <h2>✅ Películas que ya vi</h2>
+        <table id="vistas">
+          <thead><tr><th>Título</th><th>Género</th><th>Acciones</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
